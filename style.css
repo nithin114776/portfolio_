@@ -1,0 +1,238 @@
+/* Base styles */
+:root {
+    --color-primary: #60a5fa;
+    --color-dark: #1f2937;
+    --color-darker: #111827;
+    --color-light: #f3f4f6;
+    --color-gray: #4b5563;
+    --color-gray-light: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--color-light);
+    background: linear-gradient(to bottom right, var(--color-darker), var(--color-dark));
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.75rem;
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.text-blue {
+    color: var(--color-primary);
+}
+
+/* Header/Hero Section */
+header {
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 8rem 0;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-light);
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3b82f6;
+}
+
+.btn-secondary {
+    background-color: var(--color-gray);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #374151;
+}
+
+/* Sections */
+section {
+    padding: 5rem 0;
+}
+
+.about {
+    background-color: var(--color-dark);
+}
+
+.about p {
+    color: var(--color-gray-light);
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.skill-card {
+    background-color: var(--color-dark);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.skill-header i {
+    color: var(--color-primary);
+}
+
+.skill-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.skill-card p {
+    color: var(--color-gray-light);
+}
+
+/* Education Section */
+.education {
+    background-color: var(--color-dark);
+}
+
+.education-card {
+    background-color: #374151;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.education-header i {
+    color: var(--color-primary);
+}
+
+.education-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.education-status {
+    color: var(--color-gray-light);
+    margin-bottom: 0.5rem;
+}
+
+.education-focus {
+    color: var(--color-gray-light);
+}
+
+/* Footer/Contact Section */
+footer {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    color: var(--color-gray-light);
+    transition: color 0.2s;
+}
+
+.social-icon:hover {
+    color: var(--color-primary);
+}
+
+.email {
+    color: var(--color-gray-light);
+}
+
+/* Icons */
+i {
+    width: 24px;
+    height: 24px;
+}
